@@ -1,0 +1,11 @@
+app-user {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+}
+
+.icon {
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+}

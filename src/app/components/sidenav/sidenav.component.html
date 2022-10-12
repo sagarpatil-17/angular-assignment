@@ -1,0 +1,24 @@
+<mat-toolbar style="background-color: #8ec640;">
+    <mat-toolbar-row>
+        <button mat-icon-button class="text-light">
+            <mat-icon class="icon">dashboard</mat-icon>
+        </button>
+        <h1 class="text-light">Admin-Dashboard</h1>
+        <mat-icon class="ms-auto me-4 text-light icon" style="cursor: pointer;" (click)="show()">account_box</mat-icon>
+        <app-user class="user" [hidden]="isShowDiv"></app-user>
+    </mat-toolbar-row>
+</mat-toolbar>
+<!-- <mat-sidenav-container>
+    <mat-sidenav #sidenav opened="true" mode="side" >
+        <mat-nav-list>
+            <div class="d-flex" routerLink="dashboard">
+                <mat-icon class="mt-2 ms-1" style="cursor: pointer;">dashboard</mat-icon><a mat-list-item>Dashboard</a>
+            </div>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="height: 88vh;">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container> -->

@@ -1,0 +1,55 @@
+<div class="login-form">
+    <div class="login">
+        <h1 class="text-center">Register Here</h1>
+        <form [formGroup]="register" class="needs-validation">
+            <div class="form-group">
+                <label class="form-lable" for="">Name</label>
+                <input class="form-control shadow-none" type="text" id="name" formControlName="name">
+                <small class="text-danger fs-6" *ngIf="register.get('name').invalid && register.get('name').touched">
+                    Please enter your name
+                </small>
+            </div>
+            <div class="form-group">
+                <label class="form-lable" for="">Email</label>
+                <input class="form-control shadow-none" type="email" id="email" formControlName="email">
+                <small class="text-danger fs-6" *ngIf="register.get('email').invalid && register.get('email').touched">
+                    Please enter valid email
+                </small>
+            </div>
+            <div class="form-group">
+                <label class="form-lable" for="">Contact No.</label>
+                <input class="form-control shadow-none" type="number" id="contact" formControlName="contact">
+                <small class="text-danger fs-6"
+                    *ngIf="register.get('contact').invalid && register.get('contact').touched">
+                    Please enter valid number
+                </small>
+            </div>
+            <div class="form-group">
+                <label class="form-lable" for="">Gender :</label>
+                <input class="form-check-input ms-4 mt-0" type="radio" id="flexRadioDefault1" name="flexRadioDefault"
+                    value="male" formControlName="flexRadioDefault">
+                <label class="form-check-lable ms-1" for="flexRadioDefault1">Male</label>
+                <input class="form-check-input ms-3 mt-0" type="radio" id="flexRadioDefault2" name="flexRadioDefault"
+                    value="female" formControlName="flexRadioDefault">
+                <label class="form-check-lable ms-1" for="flexRadioDefault2">Female</label>
+                <!-- <small class="text-danger" *ngIf="register.get('gender').invalid && register.get('gender').touched">
+                    please select your gender
+                </small> -->
+            </div>
+            <div class="form-group">
+                <label class="form-lable" for="">Password</label>
+                <input class="form-control shadow-none" type="password" id="password" formControlName="password">
+                <small class="text-danger fs-6"
+                    *ngIf="register.get('password').invalid && register.get('password').touched">
+                    Please enter password
+                </small>
+            </div>
+            <input class="btn w-100 text-light" type="submit" value="Register" (click)="registerBtn(register.value)"
+                [disabled]="register.invalid" style="background-color: #8ec640;">
+            <div class="d-flex justify-content-center mt-2 fs-6"><span class="me-1">Already have an account?</span><a
+                    class="primary" (click)="goToLogin()" style="cursor: pointer;">Login</a>
+            </div>
+        </form>
+    </div>
+
+</div>
